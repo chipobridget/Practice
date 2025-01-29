@@ -1,0 +1,129 @@
+/* Make background cover entire viewport */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.dashboard-container {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('/image.jpg'); /* If image is in public folder */
+  /* OR */
+  /* background-image: url('../assets/image.jpg'); */ /* If image is in src/assets folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.dashboard-nav {
+  background-color: rgba(230, 50, 173, 0.9);
+  padding: 0;
+  display: flex;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 40px;
+}
+
+.nav-left {
+  display: flex;
+  gap: 1rem; /* Space between the two buttons */
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-left button {
+  margin-right: 10px; /* Additional space between buttons if needed */
+}
+.back-btn {
+  position: absolute;
+  left: 10px; /* Position it 10px from the left */
+  top: 50%; /* Align the top edge to 50% of the parent height */
+  transform: translateY(-50%); /* Move it up by 50% of its own height for centering */
+   right: 1150px;
+}
+.back-btn:hover {
+  background-color: white; /* White background on hover */
+  color: rgba(230, 50, 173, 0.9); /* Pink text on hover */
+}
+
+.logout-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dashboard-nav button {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto;
+}
+
+.dashboard-nav button:hover {
+  background-color: white;
+  color: rgba(230, 50, 173, 0.9);
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dashboard-content h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dashboard-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.dashboard-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-card h2 {
+  color: rgba(230, 50, 173, 0.9);
+  margin-bottom: 1rem;
+}
+
+.dashboard-card p {
+  color: #666;
+} 

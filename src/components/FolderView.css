@@ -1,0 +1,115 @@
+.folder-container {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('/image.jpg'); /* If image is in public folder */
+  /* OR */
+  /* background-image: url('../assets/image.jpg'); */ /* If image is in src/assets folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+}
+
+.dashboard-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.back-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: white;
+  color: rgba(230, 50, 173, 0.9);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-buttons button {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-buttons button:hover,
+.nav-buttons button.active {
+  background-color: white;
+  color: rgba(230, 50, 173, 0.9);
+}
+.logout-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.folder-header {
+  margin-bottom: 2rem;
+}
+
+.current-path {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.current-path button {
+  padding: 0.5rem 1rem;
+  width: auto;
+}
+
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.folder-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.folder-item:hover {
+  background-color: #f5f5f5;
+}
+
+.folder-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.folder-name {
+  text-align: center;
+  word-break: break-word;
+}
